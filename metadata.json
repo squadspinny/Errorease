@@ -1,0 +1,6 @@
+{
+  "name": "ErrorEase",
+  "description": "Clean, lightweight, modern technology troubleshooting blog covering Windows, browsers, network/DNS, software, and programming errors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
