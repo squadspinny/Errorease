@@ -12,11 +12,11 @@ interface SearchModalProps {
 
 const POPULAR_SEARCHES = [
   'Windows 11',
-  'Tata Motors',
-  'Term Insurance',
-  'Car Loan',
-  'iPhone 16',
-  'BSOD Fix'
+  'BSOD Fix',
+  'DNS Error',
+  'Browser Fix',
+  'Network Issue',
+  'Driver Error'
 ];
 
 export const SearchModal: React.FC<SearchModalProps> = ({
@@ -144,12 +144,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                       }}
                       className="p-3 hover:bg-slate-50 transition-colors cursor-pointer flex items-center gap-3 group"
                     >
-                      <img
-                        src={post.imageUrl}
-                        alt={post.title}
-                        style={{ borderRadius: '1px' }}
-                        className="w-14 h-11 object-cover shrink-0 bg-slate-100 border border-slate-200"
-                      />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-0.5">
                           <span 
@@ -188,12 +182,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   style={{ borderRadius: '1px' }}
                   className="p-3 hover:bg-slate-50 transition-colors cursor-pointer group flex items-start gap-3.5"
                 >
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    style={{ borderRadius: '1px' }}
-                    className="w-16 h-14 object-cover shrink-0 bg-slate-100 border border-slate-200"
-                  />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <span 
@@ -231,7 +219,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               <div>
                 <p className="text-sm font-bold text-slate-800">No articles found for "{query}"</p>
                 <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
-                  Try checking your spelling or search by general keywords such as "Windows", "Tata", "Insurance", or "Loan".
+                  Try checking your spelling or search by general keywords such as "Windows", "BSOD", "DNS", "Browser", or "Driver".
                 </p>
               </div>
               <button

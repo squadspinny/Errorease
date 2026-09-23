@@ -19,19 +19,6 @@ export const ArticleGridCard: React.FC<ArticleGridCardProps> = ({
       style={{ borderRadius: '1px' }}
       className="bg-white border border-slate-200 overflow-hidden shadow-2xs hover:shadow-md transition-shadow duration-200 group flex flex-col cursor-pointer"
     >
-      {/* Article Image with 1px border radius at top */}
-      <div 
-        style={{ borderTopLeftRadius: '1px', borderTopRightRadius: '1px' }}
-        className="relative w-full aspect-[16/10] overflow-hidden bg-slate-100"
-      >
-        <img
-          src={post.imageUrl}
-          alt={post.title}
-          loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-        />
-      </div>
-
       {/* Card Content */}
       <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between">
         <h2 className="text-[15px] sm:text-[16px] font-bold text-slate-900 leading-[1.35] tracking-tight group-hover:text-[#00a877] transition-colors mb-2.5">

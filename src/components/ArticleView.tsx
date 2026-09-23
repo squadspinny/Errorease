@@ -534,12 +534,6 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
             {/* Author and Date Meta Row with Share Button */}
             <div className="flex items-center justify-between gap-3 pb-3 flex-wrap border-b border-slate-100">
               <div className="flex items-center gap-2.5 sm:gap-3">
-                <img
-                  src={author.avatar}
-                  alt={author.name}
-                  style={{ borderRadius: '1px' }}
-                  className="w-9 h-9 sm:w-10 sm:h-10 object-cover border border-slate-200 shrink-0"
-                />
                 <div className="text-xs sm:text-[13px] leading-tight">
                   <div className="flex items-center gap-1.5 font-bold text-slate-900">
                     <span>By {author.name}</span>
@@ -584,24 +578,6 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                   </span>
                 )}
               </div>
-            </div>
-
-            {/* Featured Image */}
-            <div 
-              style={{ borderRadius: '1px' }}
-              className="w-full overflow-hidden my-3 sm:my-5 bg-slate-100 border border-slate-200/60"
-            >
-              <img
-                src={featuredImgUrl}
-                alt={post.featuredImage?.alt || post.title}
-                style={{ borderRadius: '1px' }}
-                className="w-full aspect-[16/10] sm:aspect-[16/9] object-cover"
-              />
-              {post.featuredImage?.caption && (
-                <div className="text-center text-xs text-slate-500 py-1.5 px-3 italic bg-slate-50 border-t border-slate-200/60">
-                  {post.featuredImage.caption}
-                </div>
-              )}
             </div>
 
             {/* Middle In-Article Advertisement Slot */}
@@ -758,16 +734,6 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                       }}
                       className="group cursor-pointer flex flex-col"
                     >
-                      <div 
-                        style={{ borderRadius: '1px' }}
-                        className="w-full aspect-[16/10] overflow-hidden bg-slate-100 border border-slate-100 mb-2"
-                      >
-                        <img
-                          src={rel.featuredImage?.src || rel.imageUrl}
-                          alt={rel.title}
-                          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-200"
-                        />
-                      </div>
                       <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 group-hover:text-[#00a877] transition-colors line-clamp-2 leading-snug">
                         <a
                           href={`/${rel.slug}`}
@@ -828,14 +794,8 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                     onSelectPost(latest);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="py-3 first:pt-1 last:pb-1 flex items-center gap-3 group cursor-pointer"
+                  className="py-3 first:pt-1 last:pb-1 flex flex-col gap-1 group cursor-pointer"
                 >
-                  <img
-                    src={latest.featuredImage?.src || latest.imageUrl}
-                    alt={latest.title}
-                    style={{ borderRadius: '1px' }}
-                    className="w-20 h-14 sm:w-22 sm:h-15 object-cover shrink-0 bg-slate-100 group-hover:opacity-90 transition-opacity border border-slate-100"
-                  />
                   <div className="flex-1 min-w-0">
                     <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-[#00a877] transition-colors mb-1">
                       <a
